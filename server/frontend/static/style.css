@@ -124,4 +124,44 @@ img{
       text-align:center;
       box-shadow: 2px 2px 3px #999;  
   }
-  
+
+  /* Center the contact container */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center items vertically */
+    flex-direction: column;
+    padding: 20px; /* Added padding around the entire container */
+    box-sizing: border-box; /* Ensures padding is included in the total width/height */
+}
+
+/* Style the contact image */
+.contact-image {
+    width: 100%;  /* Adjust width to full container */
+    max-width: 1000px;  /* Increase max-width to make the image a bit larger */
+    height: auto;  /* Maintain aspect ratio */
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style the contact information */
+.contact-info {
+    max-width: 600px;
+    padding: 30px;
+    background-color: #f9f9f9; /* Light background for the info section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px; /* Added space between image and info */
+    width: 100%; /* Ensure contact info section is responsive */
+}
+
+
+
+
+
+
+
+
