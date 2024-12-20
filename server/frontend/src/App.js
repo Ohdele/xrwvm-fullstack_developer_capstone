@@ -12,7 +12,6 @@ function App() {
       <Route path="/register" element={<Register />} /> {/* Add the Register route */}
       <Route path="/dealers" element={<Dealers />} />
       <Route path="/dealer/:id" element={<Dealer />} />
-
     </Routes>
   );
 }
