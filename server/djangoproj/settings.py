@@ -31,12 +31,18 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'adesinaayode-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai'
+    (
+        'adesinaayode-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.'
+        'proxy.cognitiveclass.ai'
+    )
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
-    'https://adesinaayode-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai'
+    (
+        'https://adesinaayode-8000.theiadockernext-0-labs-prod-theiak8s-4-'
+        'tor01.proxy.cognitiveclass.ai'
+    )
 ]
 
 
