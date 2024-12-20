@@ -66,9 +66,10 @@ def registration(request):
         # Check if user already exists
         User.objects.get(username=username)
         username_exist = True
-    except:
+    except Exception as e:
         # If not, simply log this is a new user
         logger.debug("{} is new user".format(username))
+        logger.debug(f"Exception occurred: {e}")
 
     # If it is a new user
     if not username_exist:
@@ -97,7 +98,7 @@ def get_dealerships(request, state="All"):
 # Create a `get_dealer_reviews` view to render the reviews of a dealer
 def get_dealer_reviews(request, dealer_id):
     # if dealer id has been provided
-    if(dealer_id):
+    if (dealer_id):
         endpoint = "/fetchReviews/dealer/"+str(dealer_id)
         reviews = get_request(endpoint)
         for review_detail in reviews:
@@ -113,7 +114,7 @@ def get_dealer_reviews(request, dealer_id):
 
 # Create a `get_dealer_details` view to render the dealer details
 def get_dealer_details(request, dealer_id):
-    if(dealer_id):
+    if (dealer_id):
         endpoint = "/fetchDealer/"+str(dealer_id)
         dealership = get_request(endpoint)
         return JsonResponse({"status":200,"dealer":dealership})
@@ -135,7 +136,7 @@ def get_cars(request):
 
 # Create a `add_review` view to submit a review
 def add_review(request):
-    if(request.user.is_anonymous == False):
+    if (request.user.is_anonymous == False):
         data = json.loads(request.body)
         try:
             response = post_review(data)
