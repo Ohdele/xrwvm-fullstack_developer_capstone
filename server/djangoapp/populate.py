@@ -1,7 +1,9 @@
 from .models import CarMake, CarModel
 
+
 def initiate():
     print("Populate not implemented. Add data manually")
+
 
 def populate_car_data():
     car_make_data = [
