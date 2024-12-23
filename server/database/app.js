@@ -29,7 +29,7 @@ app.get('/initialize-data', (req, res) => {
     });
     res.status(200).send('Data initialized successfully.');
   } catch (error) {
-    res.status(500).json({ error: 'Error initializing data' });
+    res.status(500).json({ error: `Error initializing data: ${error.message}` });
   }
 });
 
@@ -44,7 +44,7 @@ app.get('/fetchReviews', async (req, res) => {
     const documents = await Reviews.find();
     res.json(documents);
   } catch (error) {
-    res.status(500).json({ error: 'Error fetching documents' });
+        res.status(500).json({ error: `Error fetching documents: ${error.message}` });
   }
 });
 
@@ -54,7 +54,7 @@ app.get('/fetchReviews/dealer/:id', async (req, res) => {
     const documents = await Reviews.find({ dealership: req.params.id });
     res.json(documents);
   } catch (error) {
-    res.status(500).json({ error: 'Error fetching documents' });
+    res.status(500).json({ error: `Error fetching documents: ${error.message}` });
   }
 });
 
@@ -64,7 +64,7 @@ app.get('/fetchDealers', async (req, res) => {
     const dealers = await Dealerships.find();
     res.json(dealers);
   } catch (error) {
-    res.status(500).json({ error: 'Error fetching dealers' });
+    res.status(500).json({ error: `Error fetching dealers: ${error.message}` });
   }
 });
 
@@ -74,7 +74,7 @@ app.get('/fetchDealers/:state', async (req, res) => {
     const dealers = await Dealerships.find({ state: req.params.state });
     res.json(dealers);
   } catch (error) {
-    res.status(500).json({ error: 'Error fetching dealers' });
+    res.status(500).json({ error: `Error fetching dealers: ${error.message}` });
   }
 });
 
@@ -87,7 +87,7 @@ app.get('/fetchDealer/:id', async (req, res) => {
     }
     res.json(documents);
   } catch (error) {
-    res.status(500).json({ error: 'Error fetching dealer' });
+    res.status(500).json({ error: `Error fetching dealer: ${error.message}` });
   }
 });
 
