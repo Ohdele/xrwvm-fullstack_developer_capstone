@@ -32,7 +32,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     (
-        'adesinaayode-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.'
+        'adesinaayode-8000.theianext-1-labs-prod-misc-tools-us-east-0.'
         'proxy.cognitiveclass.ai'
     )
 ]
@@ -40,10 +40,11 @@ ALLOWED_HOSTS = [
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     (
-        'https://adesinaayode-8000.theiadockernext-0-labs-prod-theiak8s-4-'
-        'tor01.proxy.cognitiveclass.ai'
+        'https://adesinaayode-8000.theianext-1-labs-prod-misc-tools-us-east-0.'
+        'proxy.cognitiveclass.ai'
     )
 ]
+
 
 
 REST_FRAMEWORK = {
