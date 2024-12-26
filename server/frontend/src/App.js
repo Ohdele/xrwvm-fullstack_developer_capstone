@@ -3,7 +3,7 @@ import Register from "./components/Register/Register"; // Import the Register co
 import { Routes, Route } from "react-router-dom";
 import Dealers from './components/Dealers/Dealers';
 import Dealer from "./components/Dealers/Dealer";
-import PostReview from "./components/Dealers/PostReview"
+import PostReview from "./components/Dealers/PostReview";
 
 
 function App() {
