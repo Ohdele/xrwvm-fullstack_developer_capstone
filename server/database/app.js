@@ -19,19 +19,17 @@ const Reviews = require('./review');
 const Dealerships = require('./dealership');
 
 // Initialize data endpoint
-app.get('/initialize-data', (req, res) => {
-  try {
+try {
     Reviews.deleteMany({}).then(() => {
       Reviews.insertMany(reviews_data.reviews);
     });
     Dealerships.deleteMany({}).then(() => {
       Dealerships.insertMany(dealerships_data.dealerships);
     });
-    res.status(200).send('Data initialized successfully.');
   } catch (error) {
-    res.status(500).json({ error: `Error initializing data: ${error.message}` });
+    console.error(error);
   }
-});
+  
 
 // Express route to home
 app.get('/', async (req, res) => {
