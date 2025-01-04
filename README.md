@@ -1,13 +1,12 @@
 
-# ============================
+# =============
 # FULL STACK APPLICATION DEVELOPMENT CAPSTONE PROJECT OVERVIEW
-# ============================
+# =============
 
 I am tasked with building a website for a national car dealership to allow customers to access and submit reviews for dealership branches across the U.S. The platform includes features for anonymous, authorized, and admin users.
 
-# ============================
+
 # Use Cases
-# ============================
 
 ## Anonymous Users:
 - View About Us, Contact Us, and dealership list pages.
@@ -21,17 +20,12 @@ I am tasked with building a website for a national car dealership to allow custo
 ## Admin Users:
 - Admins can log in to manage dealership data, including adding new car makes, models, and attributes.
 
-# ============================
 #  Developer Role
-# ============================
-
 As the Lead Full-Stack Software Developer, I followed best practices to develop this portal.
 
-
-
-# ============================
+=========
 #  ARCHITECTURE OVERVIEW
-# ============================
+=========
 
 ## Project Breakdown:
 - Fork and clone GitHub repo from IBM developer skills network
@@ -58,9 +52,9 @@ As the Lead Full-Stack Software Developer, I followed best practices to develop 
   - Microservice: /analyze/:text for sentiment analysis
 
 
-# ============================
+# =========
 # Task 1: Application - Static Pages
-# ============================
+# =========
 
 1. **Fork the GitHub Repo**: Fork the provided repository containing the project template.
 
@@ -80,9 +74,10 @@ I prepared the GitHub repository and cloned the app skeleton to start building t
 Next, is some actual design and development work.
 
 
-# ============================
+# =========
 # TASK 2: User Management Overview
-# ============================
+# =========
+
 In this task, I implemented a user management system to allow administrators to manage users based on roles such as anonymous and registered users. The goal is to add the core functionality of registration, login, and logout for proper user authentication and authorization.
 
 1. **Create Superuser**: 
@@ -114,9 +109,10 @@ This task focused on implementing a robust user management system within the Dja
 I successfully added user management-related templates and views to the app, enabling user authentication and role-based access control. In the next task, I will focus on creating car/make-related models, templates, and views to handle the dealership data.
 
 
-# ============================
+# ===============
 # TASK 3: Mongo DB Dockerized Server Overview
-# ============================
+# ===============
+
 In the previous task, I implemented user authentication using the Django framework and React. For this task, the focus shifts to building the backend services for the application, which will be responsible for communicating with MongoDB.
 
 The backend services will be built using Node.js with an Express framework. These services will expose RESTful API endpoints that the Django application will interact with. The entire application, including the backend services, will be containerized using Docker and deployed on IBM Cloud Code Engine.
@@ -141,9 +137,9 @@ In this task, I developed a Dockerized Node.js application that communicates wit
 ## Conclusion:
 In this task, I successfully created a containerized Node.js application that uses MongoDB as its backend. This app exposes various API endpoints which the Django application can use to fetch dealer and review data.
 
-# ==============================
-	Django Models and Views
-# ==============================
+# ===========
+     Django Models and Views
+# ===========
 
 1. **Create Car Models**:  
    - Implemented `CarModel` and `CarMake` Django models to represent the car inventory.  
@@ -194,10 +190,9 @@ To integrate this external dealer and review data into the Django app, I created
 In this task, I learned how to create proxy services within Django to interact with external cloud functions. I was able to call APIs, convert the JSON responses into Python objects, and send the data back to the user in a structured format. The next step will be to create Django templates to display these objects on the frontend.
 
 
-
-# ==============================
+# ===========
 # Task 4: Dynamic Pages
-# ==============================
+# ===========
 
 In the previous TASK, I created the necessary backend services to manage dealerships and reviews.
 
@@ -206,7 +201,6 @@ NEXT, I created a user-friendly and aesthetic front-end pages to present these s
 ### Prerequisites:  
 - **Sentiment Analyzer**: Ensure the sentiment analysis service is deployed on IBM Code Engine and accessible via API. 
 - Backend service with Express-MongoDB from the previous task should be running and accessible on one of the terminals. 
-
 
 1. **Create Dealers Component**:  
    - Develop a React component that fetches and displays a list of all dealerships using the backend API (`/fetchDealers`).  
@@ -237,9 +231,9 @@ In this lab, I created a dealer list, dealer details, and a provision for adding
 The next steps will involve fine-tuning, testing, and deployment.
 
 
-# ==============================
+# ========
 # Task 5: CI/CD
-# ==============================
+# ========
 
 ## CI/CD Workflow Setup
 
@@ -259,9 +253,9 @@ The next steps will involve fine-tuning, testing, and deployment.
 This module establishes a CI/CD pipeline using GitHub Actions. It includes setting up automated linting to maintain code quality for Python and JavaScript files, ensuring a seamless development workflow.
 
 
-# ==============================
-	CI/CD Setup
-# ==============================
+# ========
+     CI/CD Setup
+# ========
 
 1. **Enable GitHub Actions**:
    - Integrate GitHub Actions to automate workflows triggered by events like code pushes or pull requests.
@@ -278,9 +272,9 @@ This module establishes a CI/CD pipeline using GitHub Actions. It includes setti
 The CI/CD setup automates essential tasks like linting using GitHub Actions, improving development efficiency and code maintainability.
 
 
-# ==============================
-	Containerize & Deploy to Kubernetes
-# ==============================
+# =========
+    Containerize & Deploy to Kubernetes
+# =========
 
 MY Django application is fully functional, and MY team is happy. However, THERE IS a new request. The company is looking at using containers to manage and deploy the application. Furthermore, the management is interested in using the hybrid cloud strategy, where some applications and services reside on a private cloud and others on a public cloud. To provide a more robust development experience, I AM asked to look at Kubernetes. So, I WILL containerize the application.
 
